@@ -13,4 +13,4 @@ install:
   - java -jar app-order.jar&
 
 build_script:
-  - ./gradlew test -Dselenide.headless=false
+  - ./gradlew test --info "-Dselenide.headless=true"
