@@ -35,7 +35,9 @@ public class OrderCardTest {
         form.$("[data-test-id='agreement']").click();
         form.$("button").click();
 
-        $("[data-test-id='name'] span.input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id='name'] span.input__sub")
+                .shouldHave(exactText("Имя и Фамилия указаные неверно. " +
+                        "Допустимы только русские буквы, пробелы и дефисы."));
     }
 
     @Test
@@ -46,7 +48,8 @@ public class OrderCardTest {
         form.$("[data-test-id='agreement']").click();
         form.$("button").click();
 
-        $("[data-test-id='phone'] span.input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id='phone'] span.input__sub")
+                .shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
     @Test
